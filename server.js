@@ -8,11 +8,9 @@ require("dotenv").config();
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
-//const userRouter = require("./routes/userRouter");
 const AuthorRouter = require("./routes/AuthorRouter");
 const BookRouter = require("./routes/bookRouter");
 
-//app.use("/api", userRouter);
 app.use("/api", AuthorRouter);
 app.use("/api", BookRouter);
 
